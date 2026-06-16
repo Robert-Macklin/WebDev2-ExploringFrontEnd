@@ -1,34 +1,46 @@
 export type Student = {
   id: string;
-  name: string;
-  gpa: number;
+  firstname: string;
+  lastname: string;
+  birthday: string;
+  grade: number;
   year: number;
 };
 
 export const students: Student[] = [
   { id: "00016235", 
-    name: "Ruby Rose",
-    gpa: 3.4,
+    firstname: "Ruby",
+    lastname: "Rose",
+    birthday: "07/25/2004",
+    grade: 80,
     year: 2,
   },
   { id: "00028346", 
-    name: "John Smith",
-    gpa: 4,
+    firstname: "John",
+    lastname: "Smith",
+    birthday: "12/02/2005",
+    grade: 95,
     year: 1,
   },
   { id: "00036267", 
-    name: "Gracy Glint",
-    gpa: 2.4,
+    firstname: "Gracy",
+    lastname: "Glint",
+    birthday: "08/12/2004",
+    grade: 74,
     year: 2,
   },
   { id: "00017234", 
-    name: "Gwin Pine",
-    gpa: 3.8,
+    firstname: "Gwin",
+    lastname: "Pine",
+    birthday: "09/15/2003",
+    grade: 68,
     year: 3,
   },
   { id: "00027345", 
-    name: "Judy Groove",
-    gpa: 1.2,
+    firstname: "Judy",
+    lastname: "Groove",
+    birthday: "06/16/2005",
+    grade: 45,
     year: 1,
   },
 ];
