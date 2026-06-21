@@ -71,14 +71,14 @@ export default function StudentForm({ onAdd }: { onAdd: (s: Student) => void }) 
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white p-6 rounded-lg shadow-md mt-8"
+      className="bg-slate-800 p-6 rounded-lg shadow-md mt-8 border-2 border-slate-700"
     >
-      <h2 className="text-xl font-bold mb-4">Add New Student</h2>
+      <h2 className="text-xl font-bold mb-4 text-slate-300 ">Add New Student</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
         <div>
-          <label className="text-slate-900">Student ID</label>
+          <label className="text-slate-300">Student ID</label>
           <input
             className="border p-2 w-full rounded text-slate-400"
             value={form.id}
@@ -88,7 +88,7 @@ export default function StudentForm({ onAdd }: { onAdd: (s: Student) => void }) 
         </div>
 
         <div>
-          <label className="text-slate-900">First Name</label>
+          <label className="text-slate-300">First Name</label>
           <input
             className="border p-2 w-full rounded text-slate-400"
             value={form.firstname}
@@ -100,7 +100,7 @@ export default function StudentForm({ onAdd }: { onAdd: (s: Student) => void }) 
         </div>
 
         <div>
-          <label className="text-slate-900">Last Name</label>
+          <label className="text-slate-300">Last Name</label>
           <input
             className="border p-2 w-full rounded text-slate-400"
             value={form.lastname}
@@ -112,7 +112,7 @@ export default function StudentForm({ onAdd }: { onAdd: (s: Student) => void }) 
         </div>
 
         <div>
-          <label className="text-slate-900">Birthday</label>
+          <label className="text-slate-300">Birthday</label>
           <input
             type="text"
             placeholder="MM/DD/YYYY"
@@ -126,7 +126,7 @@ export default function StudentForm({ onAdd }: { onAdd: (s: Student) => void }) 
         </div>
 
         <div>
-          <label className="text-slate-900">Grade</label>
+          <label className="text-slate-300">Grade</label>
           <input
             type="number"
             className="border p-2 w-full rounded text-slate-400"
@@ -139,7 +139,7 @@ export default function StudentForm({ onAdd }: { onAdd: (s: Student) => void }) 
         </div>
 
         <div>
-          <label className="text-slate-900">Year Level</label>
+          <label className="text-slate-300">Year Level</label>
           <input
             type="number"
             className="border p-2 w-full rounded text-slate-400"
@@ -155,7 +155,7 @@ export default function StudentForm({ onAdd }: { onAdd: (s: Student) => void }) 
 
       <button
         type="submit"
-        className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+        className="mt-4 bg-violet-300 text-slate-900 px-4 py-2 rounded-lg hover:bg-violet-400"
       >
         Add Student
       </button>

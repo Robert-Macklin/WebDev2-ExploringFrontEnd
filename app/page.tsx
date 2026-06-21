@@ -1,43 +1,40 @@
 "use client";
 
 import { useState } from "react";
-import Navbar from "./components/NavBar";
 import StudentForm from "./components/StudentForm";
+import { getStudents, Student } from "@/lib/data";
+import StudentPage from "./components/StudentCard";
 
-// Fallback local definitions to avoid missing module '@/data'
-type Student = {
-  id: number;
-  name: string;
-  email?: string;
-};
+const initialStudents: Student[] = getStudents();
 
-const initialStudents: Student[] = [];
 
-export default function Page() {
+export default function Home() {
+
   const [students, setStudents] = useState<Student[]>(initialStudents);
 
   
-  const addStudent = (s: any) => {
-    const student: Student = {
-      id: s.id ?? Date.now(),
-      name: s.name ?? "",
-      email: s.email,
-    };
+  const addStudent = (s: Student) => {
 
-    setStudents([...students, student]);
+    setStudents([...students, s]);
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-
-      <main className="flex-1 container mx-auto px-6 py-8">
-        <h1 className="text-3xl font-bold">Student List</h1>
-
-
-        <StudentForm onAdd={addStudent} />
-      </main>
-
-    </div>
+    <main className="flex flex-col flex-1 items-center bg-zinc-50 font-sans dark:bg-black">
+      <h1 className="text-3xl font-bold text-slate-300 mt-17">Student List</h1>
+      <div className="">
+        {students.map((p) => (
+          <StudentPage 
+          key={p.id}
+           id={p.id}
+          firstname={p.firstname}
+          lastname={p.lastname}
+          year={p.year}
+          birthday={p.birthday}
+          grade={p.grade}
+          />))}
+      </div>
+      <h1 className="text-3xl font-bold text-slate-300 mt-3">Add Student</h1>
+      <StudentForm onAdd={addStudent} />
+    </main>
   );
 }

@@ -45,10 +45,6 @@ export const students: Student[] = [
   },
 ];
 
-export async function getAllStudents(): Promise<Student[]> {
+export function getStudents() {
   return students;
-}
-
-export async function getStudentById(id: string): Promise<Student | undefined> {
-  return students.find((p) => p.id === id);
 }
