@@ -71,7 +71,7 @@ export default function StudentForm({ onAdd }: { onAdd: (s: Student) => void }) 
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-slate-800 p-6 rounded-lg shadow-md mt-8 border-2 border-slate-700"
+      className="bg-slate-800 p-6 rounded-lg shadow-md mt-2 border-2 border-slate-700"
     >
       <h2 className="text-xl font-bold mb-4 text-slate-300 ">Add New Student</h2>
 

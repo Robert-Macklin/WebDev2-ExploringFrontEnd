@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col flex-1 items-center bg-zinc-50 font-sans dark:bg-black">
-      <h1 className="text-3xl font-bold text-slate-300 mt-17">Student List</h1>
+      <h1 className="text-3xl font-bold text-slate-300 mt-4">Student List</h1>
       <div className="">
         {students.map((p) => (
           <StudentPage 
@@ -33,7 +33,7 @@ export default function Home() {
           grade={p.grade}
           />))}
       </div>
-      <h1 className="text-3xl font-bold text-slate-300 mt-3">Add Student</h1>
+      <h1 className="text-3xl font-bold text-slate-300 mt-2">Add Student</h1>
       <StudentForm onAdd={addStudent} />
     </main>
   );
